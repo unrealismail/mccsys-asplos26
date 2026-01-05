@@ -45,7 +45,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
 }
 
@@ -55,6 +55,7 @@ body {
   color: var(--primary-color) !important;
   text-decoration: none !important;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-brand:hover {
@@ -63,8 +64,8 @@ body {
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   gap: 0.2rem;
 }
 
@@ -72,8 +73,8 @@ body {
   display: inline-block;
   background: transparent;
   color: var(--primary-color) !important;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
   text-decoration: none !important;
   border-radius: 20px;
   font-weight: 600;
@@ -81,6 +82,7 @@ body {
   border: 2px solid transparent;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
