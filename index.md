@@ -34,11 +34,11 @@ layout: default
 <div class="dates-sidebar">
   <div class="date-item">
     <div class="date-label">Submission Deadline</div>
-    <div class="date-value">February 17th, 2026</div>
+    <div class="date-value">February 16th, 2026</div>
   </div>
   <div class="date-item">
     <div class="date-label">Notification Date</div>
-    <div class="date-value">February 20th, 2026</div>
+    <div class="date-value">February 18th, 2026</div>
   </div>
   <div class="date-item">
     <div class="date-label">Workshop Date</div>
@@ -79,11 +79,11 @@ We invite abstract submissions related to (but not limited to) the following top
 <div class="key-dates-section">
   <div class="key-date-row">
     <span class="key-date-label">Submission Deadline</span>
-    <span class="key-date-value">February 17, 2026 (23:59 AoE)</span>
+    <span class="key-date-value">February 16, 2026 (23:59 AoE)</span>
   </div>
   <div class="key-date-row">
     <span class="key-date-label">Notification of Acceptance</span>
-    <span class="key-date-value">February 20, 2026</span>
+    <span class="key-date-value">February 18, 2026</span>
   </div>
   <div class="key-date-row">
     <span class="key-date-label">Workshop Date</span>
