@@ -20,7 +20,7 @@ layout: default
 <!-- Hero Section -->
 <div class="hero-section">
   <div class="hero-date">MARCH 23<sup>rd</sup>, 2026</div>
-  <h1 class="hero-title">MCCSys 2026</h1>
+  <h1 class="hero-title">MCCSys@ASPLOS'26</h1>
   <h2 class="hero-subtitle">5th Workshop on Memory-Centric Computing Systems</h2>
   <p class="hero-conference">In conjunction with the ACM International Conference on Architectural Support for Programming Languages<br>and Operating SystemsHigh-Performance Computer Architecture (ASPLOS 2026)</p>
   <p class="hero-location"> Pittsburgh, USA</p>
