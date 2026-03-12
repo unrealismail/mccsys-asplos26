@@ -1,0 +1,138 @@
+## Agenda & Workshop Materials {#agenda}
+
+<div class="agenda-placeholder">
+    <p><strong>Program Schedule Coming Soon</strong></p>
+    <p>The detailed agenda will be announced after the acceptance notifications.</p>
+</div>
+
+### Invited Speakers {#speakers}
+
+<div class="speakers-section">
+
+    <div class="speaker-item" id="speaker-1">
+        <div class="speaker-photo">
+            <img src="assets/images/speakers/phillip-gibbons.jpg" alt="Phillip Gibbons">
+        </div>
+        <div class="speaker-info">
+            <h4><a href="https://www.cs.cmu.edu/~gibbons/" target="_blank">Prof. Phillip Gibbons</a></h4>
+            <div class="speaker-affiliation">Carnegie Mellon University</div>
+            <div class="speaker-talk-title">"Fast and Energy-Efficient Databases using Processing-in-Memory"</div>
+            <p class="speaker-bio"><strong>Short Bio:</strong> Phillip Gibbons is a Professor in the Computer Science
+                Department and the Electrical & Computer Engineering Department at Carnegie Mellon University (CMU). He
+                received his Ph.D. in Computer Science from the University of California at Berkeley. Prior to joining
+                CMU, Gibbons was a researcher at Bell Laboratories and Intel Research Pittsburgh, and co-director of the
+                Intel Science and Technology Center for Cloud Computing. His research areas include parallel computing,
+                databases, machine learning systems, computer architecture, and distributed systems. Recent projects
+                range from the theory and practice of processing-in-memory (e.g., best paper runner-up at VLDB’23) to
+                computer architecture support for robotics (e.g., best paper at Sigmetrics’24). His 200+ publications
+                span theory and systems, and have been cited 46,000+ times with an h-index of 87. Gibbons won the ACM
+                Paris Kanellakis Theory and Practice Award for pioneering the foundations of streaming data analytics
+                (2019). He was founding Editor-in-Chief for the ACM Transactions on Parallel Computing, Associate Editor
+                for the Journal of the ACM and other journals, and program/area/general chair for over a dozen
+                conferences. Gibbons is both an ACM and IEEE Fellow.</p>
+            <div class="speaker-abstract">
+                <strong>Abstract:</strong> Data movement is fast becoming the dominant cost in computing.
+                Processing-in-Memory (PIM), an idea dating back to 1970, is now emerging as a key technique for reducing
+                costly data movement, by enabling computation to be executed on compute resources embedded in memory
+                modules. But how can database indexes and transactional systems (OLTP) best take advantage of PIM,
+                especially given conventional wisdom that PIM is good only for efficient predicate filtering (in OLAP)?
+
+                This talk first highlights our work designing PIM-friendly indexes, i.e., what are PIM-optimized
+                replacements for B-trees, radix trees, and kd-trees? Our indexes address head-on the inherent tension
+                between minimizing communication and achieving load balance in PIM systems, achieving provable
+                guarantees regardless of query or data skew. Experimental results on UPMEM’s 2,560-module PIM system
+                demonstrate that our indexes outperform prior PIM indexes by up to 59x. Second, the talk highlights our
+                design of OLTPim, a PIM-friendly in-memory OLTP database system that decreases costly memory channel
+                data movement by up to 6.1x while also increasing transaction throughput by up to 1.7x, compared to
+                MosaicDB, the state-of-the-art multicore OLTP system.
+
+                This work appeared in VLDB’23 (best paper runner-up), SPAA’23, SPAA’25, VLDB’25, and PPoPP'26.
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-item" id="speaker-2">
+        <div class="speaker-photo">
+            <img src="https://rwong.cs.illinois.edu/images/Wong_Photo.jpg" alt="Ryan Wong">
+        </div>
+        <div class="speaker-info">
+            <h4><a href="https://rwong.cs.illinois.edu/index.html" target="_blank">Ryan Wong</a></h4>
+            <div class="speaker-affiliation">University of Illinois Urbana-Champaign</div>
+            <div class="speaker-talk-title">"[TALK_TITLE]"</div>
+            <p class="speaker-bio"><strong>Short Bio:</strong> Ryan Wong is a Ph.D. student in the Department of
+                Computer Science at the University of Illinois Urbana-Champaign working under Prof. Saugata Ghose. His
+                research interests are in the broad area of computer architecture, with particular emphasis in memory
+                and storage systems, as well as accelerators for scientific computing and database systems.</p>
+            <div class="speaker-abstract">
+                <strong>Abstract:</strong> [ABSTRACT]
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-item" id="speaker-3">
+        <div class="speaker-photo">
+            <img src="https://codverch.github.io/deepanjalimishra/images/deepanjali.jpg" alt="Deepanjali Mishra">
+        </div>
+        <div class="speaker-info">
+            <h4><a href="https://codverch.github.io/deepanjalimishra/" target="_blank">Deepanjali Mishra</a></h4>
+            <div class="speaker-affiliation">Carnegie Mellon University</div>
+            <div class="speaker-talk-title">"I-Fuse: Speculative Load Micro-Op Fusion for Memory-Centric Systems"</div>
+            <p class="speaker-bio"><strong>Short Bio:</strong> Deepanjali Mishra is a Ph.D. student in the Electrical
+                and Computer Engineering (ECE) department at Carnegie Mellon University (CMU), advised by Prof. Akshitha
+                Sriraman. Her research focuses on designing efficient computer systems, bridging computer architecture
+                and operating systems to enable high-performance and sustainable hyperscale data center solutions across
+                the compute stack. Deepanjali’s work has been recognized with the 2024 Carnegie Institute of Technology
+                Dean's Fellowship and the ACM-W Scholarship.</p>
+            <div class="speaker-abstract">
+                <strong>Abstract:</strong> Modern memory-bound applications, such as graph analytics and key-value
+                stores, spend a large fraction of execution time waiting on memory. Even when computation happens close
+                to memory, processors can issue multiple memory requests for the same data. These redundant requests
+                consume bandwidth, energy, and backend resources, limiting overall performance.
+
+                To address this, we propose I-Fuse, a technique that tracks load instructions frequently accessing the
+                same cache block. When two loads are commonly co-accessed, I-Fuse speculatively merges them into a
+                single fused memory request. Issuing one fused request instead of two reduces memory operations to the
+                cache and backend, lowering cache traffic and reorder buffer pressure.
+
+                I-Fuse is lightweight and can be applied alongside other memory-centric optimizations, such as PIM
+                architectures. The design focuses on detecting redundant load patterns and eliminating unnecessary
+                memory requests before they occur.
+
+                We evaluate I-Fuse on a set of modern memory-bound applications. Across eight backend-bound
+                applications, I-Fuse achieves an average speedup of 7.4%, with a maximum of 22.3%, approaching 79% of
+                the ideal fusion upper bound. These results show that reducing redundant memory operations improves
+                bandwidth utilization and efficiency. This work demonstrates that microarchitectural techniques for
+                removing redundant memory requests complement memory-centric and PIM systems, and highlights that
+                improving memory efficiency requires considering both the processor and near-memory computation.
+            </div>
+        </div>
+    </div>
+
+    <div class="speaker-item" id="speaker-4">
+        <div class="speaker-photo">
+            <img src="assets/images/yilong_zhao_photo.jpg" alt="Yilong Zhao">
+        </div>
+        <div class="speaker-info">
+            <h4><a href="https://xiaoke0515.github.io/" target="_blank">Yilong Zhao</a></h4>
+            <div class="speaker-affiliation">Shanghai Jiao Tong University</div>
+            <div class="speaker-talk-title">"UM-PIM: DRAM-based PIM with Uniform and Shared Memory Space"</div>
+            <p class="speaker-bio"><strong>Short Bio:</strong> Yilong Zhao is a Ph.D. candidate at Shanghai Jiao Tong
+                University, advised by Professor Li Jiang. He is a member of the Advanced Computer Architecture Lab
+                (ACA-IMPACT). His research focuses on processing-in-memory (PIM) architectures and AI accelerators. He
+                received his M.S. and B.S. degrees from Shanghai Jiao Tong University in 2021 and 2018, respectively.
+            </p>
+            <div class="speaker-abstract">
+                <strong>Abstract:</strong> DRAM-based Processing-in-Memory (PIM) mitigates the memory wall by
+                integrating computing units into main memory for high-bandwidth data access. However, memory
+                interleaving fragments contiguous regions visible to PIM units, forcing fine-grained offloading with
+                high CPU coordination overhead. Existing solutions disable interleaving or isolate PIM memory to ensure
+                efficiency, but sacrifice CPU bandwidth and create another system memory wall. We present UM-PIM, a
+                unified memory architecture enabling zero-copy PIM offloading without compromising CPU performance.
+                UM-PIM transparently co-locates interleaved CPU pages and contiguous PIM pages via: (i) dual-track
+                memory management with independent allocation and translation; (ii) DRAM-side dynamic address remapping
+                hardware; and (iii) communication-optimized APIs for efficient CPU access to distributed PIM data.
+            </div>
+        </div>
+    </div>
+
+</div>
