@@ -12,6 +12,14 @@ layout: default
 
 ---
 
+{% include agenda.html %}
+
+---
+
+{% include livestream.html %}
+
+---
+
 {% include call-for-presentations.html %}
 
 ---
@@ -20,13 +28,6 @@ layout: default
 
 ---
 
-{% include agenda.html %}
-
----
-
-{% include livestream.html %}
-
----
 
 {% include organizers.html %}
 
